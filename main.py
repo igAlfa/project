@@ -9,7 +9,6 @@ from utils.extract_text import extract_text
 from utils.parser import extract_structured_data
 import PyPDF2 as pdf
 import google.generativeai as genai
-from werkzeug.utils import secure_filename  # ✅ Added
 
 
 load_dotenv()
@@ -128,4 +127,5 @@ def matcher():
 
 if __name__ == '__main__':
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)  # ✅ Ensure uploads folder exists at startup
+
     app.run(debug=True)
